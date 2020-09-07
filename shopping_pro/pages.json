@@ -1,0 +1,155 @@
+{
+	"pages": [
+		{
+			"path": "pages/home/home",
+			"style": {
+				"navigationBarTitleText": "首页"
+			}
+		},
+		{
+			"path": "pages/category/category",
+			"style": {
+				"navigationBarTitleText": "类别"
+			}
+		},
+		{
+			"path": "pages/shopcart/shopcart",
+			"style": {
+				"navigationBarTitleText": "购物车"
+			}
+		},
+		{
+			"path": "pages/userCenter/userCenter",
+			"style": {
+				"enablePullDownRefresh": true,
+				"backgroundTextStyle":"light",
+				"navigationBarBackgroundColor":"#f06c7a",
+				"backgroundColorTop":"#f06c7a",
+				"navigationBarTextStyle":"white",
+				"app-plus": {
+					"titleNView": false ,//禁用原生导航栏
+					 "subNVues":[{
+					 	"id": "userTitleNvue", // 唯一标识  
+					 	"path": "pages/userCenter/subNvue/userTitleNvue", // 页面路径  
+					 	"type":"navigationBar"
+					 }]
+				}
+			}
+		}
+		
+		
+	    ,{
+            "path" : "pages/userCenter/userInfo/userInfo",
+            "style": {
+            	"enablePullDownRefresh": true,
+            	"backgroundTextStyle":"light",
+            	"navigationBarBackgroundColor":"#f06c7a",
+            	"backgroundColorTop":"#f06c7a",
+            	"navigationBarTextStyle":"white",
+            	"navigationBarTitleText": "我的设置"
+            }
+        }
+        ,{
+            "path" : "pages/userCenter/msg/msg",
+            "style": {
+            	"enablePullDownRefresh": true,
+            	"backgroundTextStyle":"light",
+            	"navigationBarBackgroundColor":"#f06c7a",
+            	"backgroundColorTop":"#f06c7a",
+            	"navigationBarTextStyle":"white",
+            	"navigationBarTitleText": "消息列表"
+            }
+        }
+        ,{
+            "path" : "pages/userCenter/qrCode/qrCode",
+            "style": {
+            	"enablePullDownRefresh": true,
+            	"backgroundTextStyle":"light",
+            	"navigationBarBackgroundColor":"#f06c7a",
+            	"backgroundColorTop":"#f06c7a",
+            	"navigationBarTextStyle":"white",
+            	"navigationBarTitleText": "我的二维码"
+            }
+        }
+        ,{
+            "path" : "pages/userCenter/collect/collect",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/login/login",
+            "style": {
+            	"enablePullDownRefresh": true,
+            	"backgroundTextStyle":"light",
+            	"navigationBarBackgroundColor":"#f06c7a",
+            	"backgroundColorTop":"#f06c7a",
+            	"navigationBarTextStyle":"white",
+            	"navigationBarTitleText": "登陆"
+            }
+        }
+		,{
+		    "path" : "pages/login/register",
+		    "style": {
+		    	"enablePullDownRefresh": true,
+		    	"backgroundTextStyle":"light",
+		    	"navigationBarBackgroundColor":"#f06c7a",
+		    	"backgroundColorTop":"#f06c7a",
+		    	"navigationBarTextStyle":"white",
+		    	"navigationBarTitleText": "注册"
+		    }
+		}
+		,{
+		    "path" : "pages/login/resetPsw",
+		    "style": {
+		    	"enablePullDownRefresh": true,
+		    	"backgroundTextStyle":"light",
+		    	"navigationBarBackgroundColor":"#f06c7a",
+		    	"backgroundColorTop":"#f06c7a",
+		    	"navigationBarTextStyle":"white",
+		    	"navigationBarTitleText": "重置密码"
+		    }
+		}
+		
+    ],
+	"globalStyle": {
+		"navigationBarTextStyle": "white",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#007AFF",
+		"backgroundColor": "#FFFFFF"
+	},
+	"tabBar": {
+				"color": "#333333",
+				"selectedColor": "#f06c7a",
+				"borderStyle": "black",
+				"backgroundColor": "#ffffff",
+				"list": [{
+						"pagePath": "pages/home/home",
+						"iconPath": "static/img/tabBar/home.png",
+						"selectedIconPath": "static/img/tabBar/home-on.png",
+						"text": "首页"
+					},
+					{
+						"pagePath": "pages/category/category",
+						"iconPath": "static/img/tabBar/category.png",
+						"selectedIconPath": "static/img/tabBar/category-on.png",
+						"text": "分类"
+					},
+					{
+						"pagePath": "pages/shopcart/shopcart",
+						"iconPath": "static/img/tabBar/cart.png",
+						"selectedIconPath": "static/img/tabBar/cart-on.png",
+						"text": "购物车"
+					},
+					{
+						"pagePath": "pages/userCenter/userCenter",
+						"iconPath": "static/img/tabBar/user.png",
+						"selectedIconPath": "static/img/tabBar/user-on.png",
+						"text": "我的"
+					}
+				]
+			}
+	
+}
+
+
+
+

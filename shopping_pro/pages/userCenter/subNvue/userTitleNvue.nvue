@@ -1,0 +1,80 @@
+<template>
+	<div class="content" :style="{height:statusBarHeight+44+'wx'}">
+		<!-- 此页面不知为何，不设置状态栏高度就布局异常 -->
+		<div class="status-bar" :style="{height:statusBarHeight+'wx'}"></div>
+		<div class="nav">
+			<image class="msg" src="../../../static/img/category/6.png" mode="aspectFit" @click="toMsg" @tap="toMsg"></image>
+			<image class="setting" src="../../../static/img/addricon.png" mode="aspectFit" @click="toSetting" @tap="toSetting"></image>
+		</div>
+	</div>
+</template>
+<script> 
+export default {
+	data() {
+		return {
+			subNVue: uni.getCurrentSubNVue(),
+			statusBarHeight:20
+		};
+	},
+	beforeCreate() {
+		
+	},
+	mounted() {
+		this.setStatusBarHeight();
+	},
+	methods: {
+		setStatusBarHeight(){
+			uni.getSystemInfo({
+				success: (res)=>{
+					console.log('设置状态栏高度：'+res.statusBarHeight);
+					this.statusBarHeight = res.statusBarHeight;
+				}
+			});
+		},
+		toMsg() {
+			console.log('aaaaa')
+			uni.navigateTo({
+				url: '/pages/userCenter/msg/msg'
+			});
+		},
+		toSetting() {
+			uni.navigateTo({
+				url: '/pages/userCenter/userInfo/userInfo'
+			});
+		}
+	}
+};
+</script>
+<style>
+
+.content {
+	background-color: #f06c7a;
+	flex-direction: column;
+}
+.status-bar {
+	flex: 1;
+}
+.nav {
+	width: 710px;
+	height: 88px;
+	/* margin-left: 20px; */
+	/* position: relative; */
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+.msg,.setting {
+	width: 30px;
+	height: 30px;
+	top: 19px;
+	/* position: absolute; */
+}
+
+.msg {
+	right: 60px;
+}
+.setting {
+	right: 20px;
+}
+</style>
